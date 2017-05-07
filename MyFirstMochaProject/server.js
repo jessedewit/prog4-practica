@@ -9,8 +9,16 @@ var express = require('express');
 var app = express();
 
 app.set('PORT', config.webPort);
+var port = app.get('PORT');
 
-app.listen(8080, function() {
+app.all('*', function(request, response, next) {
+    console.log(request.method + " " + request.url);
+    next();
+});
+
+app.use('/api/v1', require('./routes/routes_api_v1'));
+
+app.listen(port, function() {
     console.log('Server is running on port 8080');
 });
 
