@@ -6,6 +6,12 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 
+router.get('/recipes', function(request, response) {
+    var recipes = require('../recipes');
+    response.status(200);
+    response.json(recipes);
+});
+
 router.get('*', function(request, response) {
     response.status(200);
     response.json({
