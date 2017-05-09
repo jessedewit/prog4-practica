@@ -5,16 +5,19 @@
 // Source: https://en.wikibooks.org/wiki/Cookbook
 var recipes = [
     {
+        id: '1',
         name: 'Lasagne',
         category: 'Pasta',
         procedure: 'Steps for making lasagne'
     },
     {
+        id: '2',
         name: 'Calzone',
         category: 'Pizza',
         procedure: 'Steps to make calzone (pizza)'
     },
     {
+        id: '3',
         name: 'Tuna Salad',
         category: 'Salad',
         procedure: [
@@ -23,6 +26,7 @@ var recipes = [
         ]
     },
     {
+        id: '4',
         name: 'Bacon Cheese Omelet',
         category: 'Meats',
         procedure: [
